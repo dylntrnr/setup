@@ -26,6 +26,18 @@ sudo apt-add-repository -y ppa:cassou/emacs
 sudo apt-get update
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
+
+sudo apt-get install make
+
+sudo apt-get install redis-server
+
+sudo apt-get install coffeescript
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo apt-get update
+sudo apt-get install mongodb-10gen
+
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
@@ -34,7 +46,7 @@ fi
 if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
-git clone https://github.com/dylntnr/dotfiles.git
+git clone https://github.com/dylntrnr/dotfiles.git
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
