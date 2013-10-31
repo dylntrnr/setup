@@ -7,7 +7,7 @@ follows:
 ```sh
 cd $HOME
 sudo apt-get install -y git-core
-git clone https://github.com/dylntnr/setup.git
+git clone https://github.com/dylntrnr/setup.git
 ./setup/setup.sh   
 ```
 
